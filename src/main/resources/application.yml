@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: webtech-java
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: 
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  session:
+    store-type: none
+    timeout: 600s
+
+server:
+  port: 8080
+  error:
+    include-message: always
